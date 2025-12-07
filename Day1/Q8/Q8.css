@@ -1,0 +1,9 @@
+button {
+      padding: 10px;
+      cursor: pointer;
+      border: 1px black;
+      border-radius: 4px;
+      background-color: cornflowerblue;
+      color: white;
+    }
+    .todo.completed .title { text-decoration: line-through; color: gray; }
