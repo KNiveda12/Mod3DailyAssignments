@@ -11,9 +11,9 @@ const key = "todos";
         
     
     function loadTodos() {
-        const raw = localStorage.getItem(key);
-        if (!raw) return [];        
-        const parsed = JSON.parse(raw);
+        const data = localStorage.getItem(key);
+        if (!data) return [];        
+        const parsed = JSON.parse(data);
         return Array.isArray(parsed) ? parsed : [];
     }
     function renderTodos() {
