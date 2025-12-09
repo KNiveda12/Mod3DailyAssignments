@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Management App</title>
+    <link rel="stylesheet" href="Q1.css">
+</head>
+<body>
+   <div class="container">
+
+    
+    <aside class="sidebar">
+        <h2>Add Book</h2>
+        <form id="addBookForm">
+            <input type="text" id="title" placeholder="Title" required>
+            <input type="text" id="author" placeholder="Author" required>
+            <input type="number" id="price" placeholder="Price" required>
+            <input type="text" id="image" placeholder="Image URL" required>
+            <button type="submit">Add Book</button>
+        </form>
+    </aside>
+
+    
+    <main>
+        <h1 style="text-align: center;">Book List</h1>
+        <div id="bookList" class="book-grid"></div>
+    </main>
+
+</div>
+
+
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <img id="modalImage" width="150">
+        <p><strong>Author:</strong> <span id="modalAuthor"></span></p>
+        <p><strong>Price:</strong> $<span id="modalPrice"></span></p>
+    </div>
+</div> 
+<script src="Q1.js"></script>
+</body>
+</html>
