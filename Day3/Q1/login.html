@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div id="navbar"></div>
+
+  <h2>Login</h2>
+  <input id="username" placeholder="Username" /><br><br>
+  <input id="password" placeholder="Password" type="password" /><br><br>
+  <button id="loginBtn">Login</button>
+
+  <div id="footer"></div>
+
+  <script type="module">
+    import { Navbar } from "./components/navbar.js";
+    import { Footer } from "./components/footer.js";
+    import { loginUser } from "./modules/auth.js";
+
+    document.getElementById("navbar").innerHTML = Navbar();
+    document.getElementById("footer").innerHTML = Footer();
+
+    document.getElementById("loginBtn").addEventListener("click", () => {
+      loginUser(
+        document.getElementById("username").value,
+        document.getElementById("password").value
+      );
+    });
+  </script>
+</body>
+</html>
